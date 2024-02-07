@@ -24,6 +24,6 @@ model Song {
   title    String
   artist   String
   lyric    String?
-  singer   User    @relation(fields: [singerId], references: [id])
+  singer   User?   @relation(fields: [singerId], references: [id])
   singerId String  @db.ObjectId
 }
